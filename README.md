@@ -19,7 +19,7 @@
 	[3] And the way how it works:
 		this directive accept 
 		1. an dataset array as the whole range of the slider
-		( !!! currently it only deal with string/number array ), 
+		( !!! currently it only deal with string/number array, I am just lazy, cos my use case is like slide to choose diff months ), 
 		2. an range array as handler positon indicator
 
 		and the drag/auto-play operation will change the value inside the range array will as action feedback, so you 
@@ -27,7 +27,7 @@
 
 	
 	Due to time limitation, I just hard coded the size inside the code, 
-	but it will be pretty easy to add it to directive. C
+	but it will be pretty easy to add it to directive.
 
 	Current style will be:
 	.double_slider, .single_slider  {

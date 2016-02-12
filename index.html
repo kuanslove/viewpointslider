@@ -31,6 +31,8 @@
 	</li>
 </ul>
 <button ng-click="swmode()">Current mode: {{mode}}</button>
+<button ng-click="swdata()">Swap data set</button>
+
 <slider dataset="data" range="range" handlermode="mode"></slider>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -44,12 +46,23 @@
 	.controller("main", function($scope, $interval){
 		$scope.data = ["1/1/2015","2/1/2015","3/1/2015","4/1/2015","5/1/2015","6/1/2015",
 						"7/1/2015","8/1/2015","9/1/2015", "10/1/2015", "11/1/2015", "12/1/2015"];
-		$scope.range = ["2/1/2015","7/1/2015"];
-		$scope.mode = "single";
+		$scope.data2 = ["1/1/2016","2/1/2016","3/1/2016","4/1/2016","5/1/2016","6/1/2016",
+						"7/1/2016","8/1/2016","9/1/2016", "10/1/2016", "11/1/2016", "12/1/2016"];
+		$scope.range = ["2/1/2015", "7/1/2015"];
+		$scope.range2 = ["2/1/2016", "11/1/2016"];
+		$scope.mode = "double";
 		$scope.swmode = function(){
 			$scope.mode = ($scope.mode=="single")?"double":"single";
 		}
-	});
+		$scope.swdata = function(){
+			var tmpd = $scope.data;
+			var tmpr = $scope.range;
+			$scope.data = $scope.data2;
+			$scope.range = $scope.range2;
+			$scope.data2 = tmpd;
+			$scope.range2 = tmpr;
+		}
+	})
  	</script>
 
 </body>

@@ -1,0 +1,33 @@
+<div class="slider" style="width:auto;">
+	<style type="text/css">
+		.playbtn, .pausebtn {
+			float:left;
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			cursor:pointer;
+			color: grey;
+		}
+		.playbtn {
+			font-size: 30px;
+		}
+		.pausebtn {
+			font-size: 22px;
+		}
+		.sliderswitch_area {
+			float: left;
+		}
+	</style>
+
+	<span class="playbtn" ng-if="!playing" ng-click="play()">
+		&#9654;
+	</span>
+	<span class="pausebtn" ng-if="playing" ng-click="pause()">
+		&#10074;&#10074;
+	</span>
+	<div class="sliderswitch_area">
+		<double-slider dataset="dataset" range="range" ng-if="handlermode=='double'"></double-slider>
+		<single-slider dataset="dataset" range="range" ng-if="handlermode=='single'"></single-slider>
+	</div>
+</div>

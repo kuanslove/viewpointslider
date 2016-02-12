@@ -1,0 +1,71 @@
+<div class="single_slider">
+	<style type="text/css">
+		.single_slider .bar,  .single_slider .indicator{
+			display: inline-block;
+			position: absolute;
+			width: 100%;
+			height: 5px;
+			bottom: 5px;
+		}
+		.single_slider .bar{
+			background-color: lightgrey;
+		}
+		.single_slider .bar .bar_range {
+			height: 100%;
+			background-color: #008CCF;
+			display: inline-block;
+			position: absolute;
+		}
+		.single_slider .indicator{
+			background-color: none;
+		}
+		.single_slider .indicator .tick {
+			display: inline-block;
+			position: absolute;
+
+			width: 9px;
+			height:9px;
+			border: 1px solid grey;
+			top: -2px;
+			box-sizing: border-box;
+			border-radius: 4px;
+
+			cursor: pointer;
+			box-shadow: 0 0 1px 1px;
+		}
+		.single_slider .indicator .tick {
+			background-color: whitesmoke;
+		}
+		.single_slider .indicator .tick:hover {
+			background-color: lightgrey;
+		}
+
+		.single_slider .indicator .tick .title {
+			display: inline-block;
+			position: absolute;
+			bottom: 100%;
+			background-color: white;
+			border: 1px solid grey;
+			width: auto;
+			white-space: nowrap;
+			border-radius:2px;
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none;   /* Chrome/Safari/Opera */
+			-khtml-user-select: none;    /* Konqueror */
+			-moz-user-select: none;      /* Firefox */
+			-ms-user-select: none;       /* IE/Edge */
+			user-select: none;  
+			transform: translateX(-50%);
+			margin-left:3px;
+			padding:2px;
+			font-size:12px;
+		}
+	</style>
+	<div class="bar">
+	</div>
+	<div class="indicator">
+			<span class="tick left" ng-style="{'left': (seg*l_idx)+'px'}">
+				<span class="title">{{dataset[l_idx]}}</span>
+			</span>
+	</div>
+</div>

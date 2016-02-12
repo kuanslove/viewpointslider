@@ -8,7 +8,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js"></script>
 	<script src="./viewpoint-slider.js"></script>
-
+	
+	Of course, do not forget the templates folder, just keep current folder structure will be fine 
 
 	Basic instruction is:
 
@@ -23,3 +24,16 @@
 
 		and the drag/auto-play operation will change the value inside the range array will as action feedback, so you 
 		just need to watch that range array changing in you scope which provides it, and that is it. 
+
+	
+	Due to time limitation, I just hard coded the size inside the code, 
+	but it will be pretty easy to add it to directive. C
+
+	Current style will be:
+	.double_slider, .single_slider  {
+		display: inline-block;
+		position: relative;
+		
+		width: 300px;
+		height: 40px;
+	}

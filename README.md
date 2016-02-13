@@ -3,6 +3,8 @@
 	it may have a general purpose for simple prime type value array
 	So I just put it here see if anyone want to use it.
 
+![Alt text](Capture.PNG?raw=true "Optional Title")
+
 	This module require d3.js and angular
 	you can just add reference like:
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
